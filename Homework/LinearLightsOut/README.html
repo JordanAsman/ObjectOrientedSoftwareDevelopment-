@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="../../style/github-pandoc.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="csse-220-object-oriented-software-development">CSSE 220 Object-Oriented Software Development</h1>
+<h2 id="ballstrike-counter-and-linear-lights-out">Ball/Strike Counter and Linear Lights Out</h2>
+<h3 id="objectves">Objectves</h3>
+<p>More practice with event-based programming in Swing. This has an Individual Part and a Pair Part.</p>
+<h3 id="individual-part">Individual Part</h3>
+<p><strong>Ball/Strike Counter: This part is to be done individually.</strong> Implement the code in the <em>ballStrikeCounter</em> package. We gave you a simple GUI framework for a program that tracks balls and strikes for a baseball game. You need to add the buttons, ActionListeners, and variables necessary to make the code work. You may add any new classes or make any changes you feel necessary. The method for properly displaying the label has been provided for you in the updateLabel method. 1. <strong>Points (20 points)</strong> * <strong>5 points</strong> - The Add Ball and Add Strike buttons appear in the window as shown in the image. * <strong>15 points</strong> - The buttons should work as follows: <strong>Add Ball</strong> adds a ball to the count. If the count reaches 4, the count of both the balls and strikes should reset to 0. The label should be updated to reflect the new ball/strike counts. <strong>Add Strike</strong> adds a strike to the count. If the count reaches 3, the count of both of the balls and strikes should reset to 0. The label should be updated to reflect the new ball/strike counts.</p>
+<figure>
+<img src="ballstrike.png" alt="alt text" /><figcaption>alt text</figcaption>
+</figure>
+<h3 id="pair-part">Pair Part</h3>
+<p><strong>Linear Lights Out. You may work with a single classmate of your choosing on this part. You may sit together while you work and discuss ideas and code freely, but each person must type and submit their code to their own repository. If you do this, please identify the classmate in a comment at the top of your program.</strong></p>
+<p>Implement the game Linear Lights Out in the <em>linearLightsOut</em> project. In Linear Lights Out, the user is presented with an array of buttons that are randomly initialized to either Xs or Os, 50% probability each. Clicking on a button changes the symbol of the button <em>and both its left and right neighbors</em>, if they exist. Buttons on the end just change their own symbol and their one neighbor’s symbol; the buttons don’t “wrap around”. The object of the game is to reach a state where the buttons all show the same symbol, whether Xs or Os, it doesn’t matter.</p>
+<p>We’re providing a lot less “scaffolding” for this problem than most of the previous ones. Everything you need to solve the problem has either appeared in previous homework or examples, or is in the Java API documentation for <em>JButton</em>. Remember to ask for help if you get stuck.</p>
+<p>Here are the various stages you should complete: - <strong>Stage 0:</strong> Examine the main method in the LinearMain class in the linearLightsOut package in the LinearLightsOut project that you checked out in class. This is all the code that we supply for the project: the rest is your responsibility. - <strong>Stage 1:</strong> Display a frame with the right title. - <strong>Stage 2:</strong> Display the right number of buttons in the frame (see the nButtons variable in <em>LinearMain.main</em>) without worrying about event handling or the symbols on the buttons. For full credit, your final solution must work with any <em>nButtons</em> greater than 2. - <strong>Stage 3:</strong> Make sure the buttons are initialized to random symbols (Xs and Os, 50% probability each). - <strong>Stage 4:</strong> Implement a working Quit button (This involves implementing an event handler for the Quit button). - <strong>Stage 5:</strong> Implement a working New Game button. When the button it pressed, the game should reset the symbol buttons to a new set of random symbols. - <strong>Stage 6:</strong> Set up event handlers for the symbol buttons that correctly toggle the symbols as described above. - <strong>Stage 7:</strong> Check for a win and notify the player in some way through the GUI (not simply by System.out.println). Changing the window title would suffice. (If you do that, be sure to change it back when the player clicks <em>New Game</em>.)</p>
+<h4 id="hints">Hints</h4>
+<ol type="1">
+<li>The <em>setText()</em> and <em>getText()</em> methods of JButton are your friends.</li>
+<li>You do not need to use inheritance to solve this problem; your BallWorlds project will give you practice with that.
+<ul>
+<li>You may, however, use inheritance in this project if you wish: extending JFrame, JButton, and/or JPanel, for example. But usually this is not helpful.</li>
+</ul></li>
+</ol>
+<p>Here’s a screen shot of the game in progress:</p>
+<figure>
+<img src="LinearLightsOut.png" alt="alt text" /><figcaption>alt text</figcaption>
+</figure>
+<h3 id="remember-in-all-your-code">Remember, in all your code:</h3>
+<ul>
+<li>Write appropriate comments:
+<ul>
+<li>Javadoc comments for public fields and methods.</li>
+<li>Explanations of anything else that is not obvious.</li>
+</ul></li>
+<li>Give self-documenting variable and method names:
+<ul>
+<li>Use name completion in Eclipse, Ctrl-Space, to keep typing cost low and readability high.</li>
+</ul></li>
+<li>Use Ctrl-Shift-F in Eclipse to format your code.</li>
+<li>Take care of all auto-generated TODO’s.
+<ul>
+<li>Then delete the TODO comment.</li>
+</ul></li>
+<li>Correct ALL compiler warnings.
+<ul>
+<li>Quick Fix is your friend!</li>
+</ul></li>
+</ul>
+<ol type="1">
+<li><strong>Points - 10 points for each stage</strong>
+<ul>
+<li><strong>-5 points</strong> - The windows does not automatically size for the number of buttons entered</li>
+<li><strong>-5 points</strong> - The new game button does not reset the game won notification (if applicable)</li>
+</ul></li>
+<li><strong>Total: 70 points</strong></li>
+</ol>
+<p><strong>Total for both parts: 90 points</strong></p>
+<h3 id="submission-instructions">Submission Instructions</h3>
+<p>For this assignment we will be having you submit your code by committing to your personal git repository. Please see instructions <a href="../../Docs/using_your_repo.html">here</a> for how to access and submit to your personal repository.</p>
+<p>Note: It will be best if you can use the Eclipse plugin, so please seek out assistance via Piazza or your instructor if you do run into trouble.</p>
+<p>If you run into great difficulty using the Eclipse plugin and want to explore using other means beyond Eclipse’s built in git plugin, you can also try to install <a href="../../Docs/using_your_repo.html">git for windows using these provided instructions</a>. Using git-bash allows you to run commands from a terminal type interface.</p>
+</body>
+</html>

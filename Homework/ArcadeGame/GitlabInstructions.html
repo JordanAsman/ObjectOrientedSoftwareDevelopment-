@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>GitlabInstructions</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="../../style/github-pandoc.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="using-git-for-your-arcade-game-project">Using Git for Your Arcade Game Project</h1>
+<p>For the arcade game project, you will be doing group development. Therefore, we’ll be asking you to use a source control system called git. You’ve already used git to checkout code/homework from the CSSE220 repo, but for this project you will be managing a repo and also using it to submit your homework.</p>
+<h1 id="step-1-forking-my-repo">Step 1: Forking My Repo</h1>
+<p><em>This step should only be done by one member of your Arcade Game team.</em></p>
+<ol type="1">
+<li><p>Go to this URL:</p>
+<p>https://ada.csse.rose-hulman.edu/hewner/ArcadeGame</p>
+You’ll have to login with your rose credentials.</li>
+<li>Click “fork”</li>
+<li>Select your name as the namespace</li>
+<li>Go to Settings &gt; General &gt; Permissions</li>
+<li>Change the Project Visibility to “Private” and press “Save Changes”</li>
+<li>Go to Settings &gt; Members</li>
+<li>Invite the other members of your team to your project (they may need to login at https://ada.csse.rose-hulman.edu/hewner/ so they show up in the list) as Maintainers</li>
+<li>Invite the other members of the grading team to your project as Maintainers. The team should be
+<ul>
+<li>Michael Hewner</li>
+<li>Joseph Hollingsworth</li>
+<li>Nicklas Carpenter</li>
+<li>Knut Peterson</li>
+<li>Jordan Hazelrigg</li>
+<li>Ryan Bailey</li>
+</ul></li>
+<li><p>Find your repo URL. It should appear beneath your project’s name on the main project page. It should look something like this:</p>
+<p>https://ada.csse.rose-hulman.edu/XXXXXX/ArcadeGame.git</p>
+<p>Go to this spreadsheet and set the URL for your team</p>
+<p>https://docs.google.com/spreadsheets/d/13sddHs4ibMhEezSFs-IjkCt71TvmWy19bqk98kSavkw/edit?usp=sharing</p></li>
+</ol>
+<h1 id="step-2-checking-out-the-repo">Step 2: Checking out the Repo</h1>
+<p>This step should be done by everyone in your team.</p>
+<ol type="1">
+<li>In your browser, go to https://ada.csse.rose-hulman.edu and verify that you have access to your project. Copy the Repo URL.</li>
+<li>Open your Eclipse and go to File &gt; Import &gt; Git &gt; Projects from Git</li>
+<li>Select “Clone URI”</li>
+<li>In the URI field paste the URL you took from the website. Host and repository path should get filled out for you</li>
+<li>In Authentication, enter your rose credentials (you might find it convenient to have it save these for you) and hit Next</li>
+<li>In branch selection make sure master is checked and click next</li>
+<li>In local destination, you can configure anywhere you like <em>except</em> the directories that your existing CSSE220 repos are being checked out to</li>
+<li>Select “Import existing eclipse projects” and select next.</li>
+<li>You should see “AracadeGameGit” on the list, make sure it’s checked and select next</li>
+<li>You should see a folder for ArcadeGameGit in your project browser</li>
+</ol>
+<h1 id="step-3-test-push-and-pull">Step 3: Test Push and Pull</h1>
+<p>Have <em>one</em> member of your team make a change and push it. Here’s how:</p>
+<ol type="1">
+<li>In eclipse, edit the Main.java file (maybe edit the <span class="citation" data-cites="author">@author</span>? whatever) and save it</li>
+<li>Right click on the project folder and select Team &gt; Commit</li>
+<li>Verify that main.java appears in your list of “Staged Changes”</li>
+<li>Also add the .gitignore to your staged changes by selecting it and clicking +</li>
+<li>Add some text in the commit message</li>
+<li>Select Commit and push</li>
+</ol>
+<p>Have <em>everyone else</em> on your team pull the latest version</p>
+<ol type="1">
+<li>Right click on the project folder and select Team &gt; Pull</li>
+<li>You might have to enter your credentials</li>
+<li>You should get the updated files</li>
+</ol>
+<h1 id="step-4-cause-a-merge-conflict">Step 4: Cause a Merge Conflict</h1>
+<p>Have <em>everyone</em> in your team</p>
+<ol type="1">
+<li>Edit the same line of code in a different way. Say add your name to the println.</li>
+<li>Attempt to commit and push.</li>
+<li>The first person who does it should succeed. The rest should get a “rejected non-fast-forward” error.</li>
+</ol>
+<p>For one of those those who failed:</p>
+<ol type="1">
+<li>Right click on the project folder and select team &gt; Pull</li>
+<li>You should see a message about conflict and things will look sort of scary</li>
+<li>Look at the edited file. You should see that both versions of the code are there plus some &lt;&lt;&lt;&lt;&lt; ===== &gt;&gt;&gt;&gt; lines</li>
+<li>Figure out what the <em>combination</em> of the changes ought to be (probably all your names in the println) and edit the file to be correct, deleting all unnecessary stuff</li>
+<li>Test your code and make sure that everything works as expected</li>
+<li>Write click on the project folder and select Team &gt; Commit</li>
+<li>Manually move all your files into “Staged changes” with the +</li>
+<li>Commit and push</li>
+<li>Now have the original committer pull and they should have the merged version too</li>
+<li>If they are any other members of year team, have them do step 4 onward</li>
+</ol>
+<h1 id="step-5-lets-do-this">Step 5: Let’s do this</h1>
+<p>You have the basics!</p>
+<ol type="1">
+<li>Have the team member who has the latest version of your source code copy all the files into ArcadeGameGit (hint: you can select files in the eclipse package explored and use right click copy and paste)</li>
+<li>Test and verify that the game runs in its new project</li>
+<li>Stage all the files, and then commit and push them</li>
+<li>Have everyone else pull the changes</li>
+<li>Verify that everyone has a running up to date game on their eclipse</li>
+</ol>
+<p>Done!</p>
+<h1 id="good-advice-for-minimal-merge-conflicts">Good Advice for Minimal Merge Conflicts</h1>
+<ul>
+<li>Pair program whenever possible</li>
+<li>Always do a Team Pull before you begin programming</li>
+<li>Always to a Team Commit/Push when you finish</li>
+<li>If you do have to resolve a merge conflict, remember you must accommodate <em>both</em> changes</li>
+</ul>
+</body>
+</html>
