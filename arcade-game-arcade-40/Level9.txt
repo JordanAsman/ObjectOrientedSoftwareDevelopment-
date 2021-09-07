@@ -1,0 +1,10 @@
+b _ _ r _ _ _ _ b
+b _ _ _ _ _ _ _ b
+b _ _ _ g _ _ _ b
+b _ p _ b _ _ r b
+b r b _ _ _ b _ b
+b _ _ b _ b _ _ b
+b _ _ _ b p _ _ b
+b _ _ b _ b _ _ b
+b h _ _ _ _ _ g b
+b b b b b b b b b
